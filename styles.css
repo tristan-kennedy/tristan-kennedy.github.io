@@ -54,7 +54,24 @@ body {
   user-select: none;
   display: flex;
   flex-direction: column;
+  align-items: center;
   color: #cccccc;
+}
+
+.sidebar .section {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sidebar .section:first-child {
+  margin-top: 12px;
+}
+
+.sidebar .section:last-child {
+  margin-bottom: 12px;
+  justify-content: end;
 }
 
 .explorer {
