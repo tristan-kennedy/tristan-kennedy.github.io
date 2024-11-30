@@ -152,6 +152,7 @@ body {
   padding: 0px 16px;
   font-size: 14px;
   text-decoration: none;
+  align-items: center;
 }
 
 .explorer details a:hover {
@@ -163,6 +164,13 @@ body {
   transform: rotate(90deg);
   width: 20px;
   height: 20px;
+  margin-right: 2px;
+}
+
+.json-icon {
+  stroke: gold;
+  width: 20px;
+  height: 12px;
   margin-right: 2px;
 }
 
@@ -185,21 +193,12 @@ body {
   height: 100%;
   padding: 0 24px 0 12px;
   text-decoration: none;
+  justify-content: center;
 }
 
 .tabbar .tab.selected {
   background-color: #1e1e1e;
   color: #ffffff;
-}
-
-.content {
-  grid-area: content;
-  padding: 10px;
-  background-color: #1e1e1e;
-  color: white;
-  overflow-y: auto;
-  font-size: xx-large;
-  font-family: JetBrains Mono;
 }
 
 .footer {
@@ -232,4 +231,98 @@ body {
 
 .footer .section:last-child {
   margin-right: 8px;
+}
+
+.content {
+  display: flex;
+  grid-area: content;
+  padding: 25px;
+  background-color: #1e1e1e;
+  color: white;
+  overflow-y: auto;
+  font-family: JetBrains Mono;
+}
+
+.content .container {
+  display: flex;
+  flex-grow: 1;
+  position: relative;
+  align-items: center;
+}
+
+.background {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  font-family: Montserrat;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-size: 10rem;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.03);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.background svg {
+  color: #abddf1;
+}
+
+.foreground {
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.name {
+  font-size: 3.5rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.dynamic-text {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 3rem;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.dynamic-text::after {
+  content: "|";
+  display: inline-block;
+  animation: blink 1s step-start infinite;
+}
+
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007acc; /* Solid color */
+  color: white;
+  font-size: 1rem;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #005f99; /* Slightly darker blue */
+  transform: translateY(-2px); /* Subtle lift */
+}
+
+button:active {
+  background-color: #004d80; /* Even darker blue */
+  transform: translateY(0); /* Reset position */
 }
