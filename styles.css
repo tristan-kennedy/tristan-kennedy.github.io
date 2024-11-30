@@ -327,3 +327,59 @@ button:active {
   background-color: #004d80; /* Even darker blue */
   transform: translateY(0); /* Reset position */
 }
+
+.contact-title {
+  font-size: 3rem;
+  margin-bottom: 32px;
+}
+
+.code-editor {
+  display: grid;
+  font-family: "JetBrains Mono", monospace;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 20px;
+  font-size: 1.5rem;
+  color: white;
+  width: 100%;
+  line-height: 1.8; /* Ensures spacing between lines */
+}
+
+.code-line {
+  display: flex;
+  align-items: center;
+}
+
+.line-number {
+  color: #666;
+  text-align: right;
+  margin-right: 10px;
+  flex-shrink: 0;
+  width: 30px; /* Ensures proper alignment */
+}
+
+.keyword {
+  color: #569cd6; /* Accent color for 'contacts' */
+}
+
+.key {
+  color: #9cdcfe; /* Light blue for keys */
+  margin-left: 20px;
+}
+
+.value {
+  color: #ce9178; /* Orange for values */
+  text-decoration: none;
+}
+
+.value:hover {
+  text-decoration: underline;
+}
+
+.bracket {
+  color: #007acc; /* Accent color for brackets */
+}
+
+a.value {
+  cursor: pointer;
+}
